@@ -15,12 +15,9 @@ vim.pack.add{
   { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
 
   -- extras
-  { src = "https://github.com/ThePrimeagen/harpoon" },
   { src = "https://github.com/mbbill/undotree" },
   { src = "https://github.com/tpope/vim-fugitive" },
 }
-
-vim.cmd('colorscheme rose-pine')
 
 require("thezanrutar.set")
 require("thezanrutar.remap")
