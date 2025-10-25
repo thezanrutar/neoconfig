@@ -1,18 +1,18 @@
 require('mason').setup()
 require('mason-lspconfig').setup()
 require('mason-tool-installer').setup({
-  ensure_intalled = {
+  ensure_installed = {
     "codebook",
-  }
+  },
 })
 
-vim.lsp.config('codebook', {
+vim.lsp.config("codebook", {
   settings = {
     Lua = {
       diagnostics = {
         globals = {
-          'vim',
-          'require',
+          "vim",
+          "require",
         },
       },
       workspace = {
