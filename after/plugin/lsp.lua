@@ -2,6 +2,9 @@ require('mason').setup()
 require('mason-lspconfig').setup()
 require('mason-tool-installer').setup({
   ensure_installed = {
+    "ast-grep",
+    "cpptools",
+    "js-debug-adapter",
     "codebook",
   },
 })
