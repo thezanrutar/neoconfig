@@ -16,10 +16,14 @@ vim.pack.add{
   -- colorscheme
   { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
 
+  -- treesitter
+  { src = "https://github.com/nvim-treesitter/nvim-treesitter",
+    branch = "main" },
+
   -- extras
---  { src = "https://github.com/ThePrimeagen/harpoon",
---    branch = "harpoon2" },
-  { src = "https://github.com/mbbill/undotree" },
+  -- { src = "https://github.com/ThePrimeagen/harpoon",
+  -- branch = "harpoon2" },
+  -- { src = "https://github.com/mbbill/undotree" },
   { src = "https://github.com/tpope/vim-fugitive" },
 }
 
