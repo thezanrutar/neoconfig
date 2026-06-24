@@ -1,31 +1,26 @@
-vim.pack.add{
-  -- dependencies
-  { src = "https://github.com/nvim-lua/plenary.nvim" },
-  { src = "https://github.com/rafamadriz/friendly-snippets"},
+vim.pack.add({
+	"https://www.github.com/lewis6991/gitsigns.nvim",
+	"https://www.github.com/echasnovski/mini.nvim",
+	"https://www.github.com/ibhagwan/fzf-lua",
+	{
+		src = "https://www.github.com/nvim-treesitter/nvim-treesitter",
+		branch = "main",
+		build = ":TSUpdate",
+	},
+	"https://www.github.com/neovim/nvim-lspconfig",
+	"https://www.github.com/mason-org/mason.nvim",
+	"https://www.github.com/creativenull/efmls-configs-nvim",
+	{
+		src = "https://www.github.com/saghen/blink.cmp",
+		version = vim.version.range("1.*"),
+	},
+	"https://www.github.com/L3MON4D3/LuaSnip",
+})
 
-  -- core
-  { src = "https://github.com/neovim/nvim-lspconfig" },
-  { src = "https://github.com/mason-org/mason.nvim" },
-  { src = "https://github.com/mason-org/mason-lspconfig.nvim" },
-  { src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
-  { src = "https://github.com/Saghen/blink.cmp" },
-
-  -- telescope
-  { src = "https://github.com/nvim-telescope/telescope.nvim" },
-
-  -- colorscheme
-  { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
-
-  -- treesitter
-  { src = "https://github.com/nvim-treesitter/nvim-treesitter",
-    branch = "main" },
-
-  -- extras
-  -- { src = "https://github.com/ThePrimeagen/harpoon",
-  -- branch = "harpoon2" },
-  -- { src = "https://github.com/mbbill/undotree" },
-  { src = "https://github.com/tpope/vim-fugitive" },
-}
+function packadd(name)
+	vim.cmd("packadd " .. name)
+end
 
 require("thezanrutar.set")
 require("thezanrutar.remap")
+require("thezanrutar.autocmds")
